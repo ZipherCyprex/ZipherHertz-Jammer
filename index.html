@@ -32,41 +32,41 @@
 
         @font-face {
             font-family: 'Minecraft Ten';
-            src: url('font/FC Iconic Bold.otf') format('truetype');
+            src: url('UI/font/FC Iconic Bold.otf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'iconic';
-            src: url('font/FC Iconic Regular.otf') format('opentype');
+            src: url(UI/'font/FC Iconic Regular.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
 
                 @font-face {
             font-family: 'iconic';
-            src: url('font/FC Iconic Italic.otf') format('opentype');
+            src: url('UI/font/FC Iconic Italic.otf') format('opentype');
             font-weight: normal;
             font-style: italic;
         }
 
                 @font-face {
             font-family: 'iconic';
-            src: url('font/FC Iconic Bold.otf') format('opentype');
+            src: url('UI/font/FC Iconic Bold.otf') format('opentype');
             font-weight: bold;
             font-style: normal;
         }
 
                         @font-face {
             font-family: 'iconic';
-            src: url('font/FC Iconic Bold Italic.otf') format('opentype');
+            src: url('UI/font/FC Iconic Bold Italic.otf') format('opentype');
             font-weight: bold;
             font-style: italic;
         }
 
         body {
-            /* cursor: url('res/cursor40pxV.png'), auto; */
+            /* cursor: url('UI/res/cursor40pxV.png'), auto; */
             font-family: Minecraft Ten;
             padding: 0;
             margin: 0;
@@ -76,7 +76,7 @@
         }
 
         .content {
-            /* cursor: url('res/cursor40pxV.png'), auto; */
+            /* cursor: url('UI/res/cursor40pxV.png'), auto; */
             z-index: 1;
             font-family: Minecraft Ten;
             max-width: 870px;
@@ -428,7 +428,7 @@
 
         <div class="video-background">
             <video id="bg-vdo" autoplay loop playsinline muted >
-                <source src="res/vd3.mp4" type="video/mp4">
+                <source src="UI/res/vd3.mp4" type="video/mp4">
             </video>
         </div>
         
@@ -438,7 +438,7 @@
         <h1  class="head1">ZipherHertz Installer 
             
         </h1>
-        <!-- <img src="res/ico-red-tran1.png" width="auto" height="50"> -->
+        <!-- <img src="UI/res/ico-red-tran1.png" width="auto" height="50"> -->
         <div class="pad"></div>
 
         <p class="option">VERSION</p>
@@ -456,7 +456,7 @@
             </li>
         </ul>
         <p class="button-row">
-            <esp-web-install-button class="invisible" install-supported="" manifest="load\manifest_zhlast.json"></esp-web-install-button>
+            <esp-web-install-button class="invisible" install-supported="" manifest="UI/load\manifest_zhlast.json"></esp-web-install-button>
         </p>
         
         
@@ -499,7 +499,7 @@
             document.querySelectorAll('input[name="type"]').forEach(radio =>
                 radio.addEventListener("change", () => {
                     const button = document.querySelector('esp-web-install-button');
-                    button.manifest = `load/manifest_${radio.value}.json`;
+                    button.manifest = `UI/load/manifest_${radio.value}.json`;
                     button.classList.remove('invisible');
                 })
             );
