@@ -1,0 +1,25 @@
+{
+    "name": "Zipher Hertz Lasted! 4Mode",
+    "builds": [
+        {
+            "chipFamily": "ESP32",
+            "improv": false,
+            "noreset": true,
+            "parts": [
+                {
+                    "path": "hertzv1.ino.merged0.0.4.bin",
+                    "offset": 0
+                }
+            ]
+        },
+        {
+            "chipFamily": "ESP32-S2",
+            "parts": [
+                {
+                    "path": "hertzv1.ino.merged0.0.4.bin",
+                    "offset": 0
+                }
+            ]
+        }
+    ]
+}

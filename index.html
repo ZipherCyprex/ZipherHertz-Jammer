@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>zistarr.upt</title>
+    <!-- <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/Paper-web4.png" /> -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta property="og:title" content="ZipherHertz installer" />
+    <meta name="author" content="Nickqme71" />
+    <meta property="og:description" content="Easily allow users to update Zipher HID." />
+    <meta
+      name="description"
+      content="Update ZHertz."
+    />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <link rel="icon" type="image/png" href="res/zistarr.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    
+
+    <style>
+        /* @import url(https://db.onlinewebfonts.com/c/a7fcb1becc12274d5b761b1d895f8aa9?family=Minecraft+Ten); */
+        * {
+            --textcolor: rgb(239, 232, 255);
+            --bgcolor: linear-gradient(to bottom, #ffffff, #ffffff);
+            --success: rgb(144, 84, 255);
+            --failure: #c9002c;
+            --p: #424242;
+            --pp: #ff0f4b;
+        }
+
+        @font-face {
+            font-family: 'Minecraft Ten';
+            src: url('font/FC Iconic Bold.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'iconic';
+            src: url('font/FC Iconic Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+                @font-face {
+            font-family: 'iconic';
+            src: url('font/FC Iconic Italic.otf') format('opentype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+                @font-face {
+            font-family: 'iconic';
+            src: url('font/FC Iconic Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+                        @font-face {
+            font-family: 'iconic';
+            src: url('font/FC Iconic Bold Italic.otf') format('opentype');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        body {
+            /* cursor: url('res/cursor40pxV.png'), auto; */
+            font-family: Minecraft Ten;
+            padding: 0;
+            margin: 0;
+            line-height: 1.6;
+            font-size: 10px;
+            color: #fefcff;
+        }
+
+        .content {
+            /* cursor: url('res/cursor40pxV.png'), auto; */
+            z-index: 1;
+            font-family: Minecraft Ten;
+            max-width: 870px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Minecraft Ten;
+            font-weight: 600;
+            margin: 0 0 20px;
+        }
+
+        h1 {
+            font-size: 4.6rem;
+            font-family: Minecraft Ten;
+            line-height: 1;
+            
+        }
+
+        
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        
+        
+        
+        
+        
+
+        a {
+            font-family: Minecraft Ten;
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        .button-row {
+            font-family: Minecraft Ten;
+            margin: 40px 0;
+        }
+
+        .footer > a {
+            color: #ffffff60;
+            font-family: iconic;
+            font-weight: lighter;
+        }
+        .footer {
+            color: #ffffff60;
+            font-family: iconic;
+            font-weight: lighter;
+            margin-top: 15px;
+            border-top: 1px solid #232323;
+            padding-top: 23px;
+            font-size: 1rem;
+            padding-top: 15px;
+        }
+
+        .footer .initiative {
+            font-style: italic;
+            margin-top: 16px;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .option {
+            
+            font-family: Minecraft Ten;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 2em;
+            width: 140px;
+            background-color: #7906bb63;
+            /* border: 1.7px solid #960cf8; */
+            font-size: 18px;
+            align-items: center;
+            text-align: center;
+            padding: 0.1rem 0.1rem;
+            border-radius: 12px;
+            color: #a200ff;
+            border: none;
+        }
+
+        .mus-btn {
+            
+            cursor: pointer;
+            
+            width: auto;
+            font-weight: bold;
+            font-family: Minecraft Ten;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 90px;
+            background-color: #bb062d63;
+            /* border: 1.7px solid #960cf8; */
+            font-size: 19px;
+            align-items: center;
+            text-align: center;
+            padding: 0.1rem 0.1rem;
+            border-radius: 12px;
+            color: #ff0651;
+            border: none;
+            transition: transform 0.3s ease;
+            
+        }
+
+        .hidden {
+        opacity: 0; /* ทำให้ปุ่มโปร่งใส */
+        transform: translateY(-20px); /* ย้ายปุ่มขึ้นเล็กน้อย */
+        }
+
+        .mus-btn:hover {
+        transform: translateY(4px); /* ปรับตำแหน่งเมื่อกด */
+        }
+
+        .head1 {
+            margin-top: 30px;
+        }
+
+        .vv {
+            margin-top: 160px;
+            /* border-bottom: 1px solid #66089c; */
+            padding: 13px 0;
+            font-size: 33px;
+            color: #ff0f4b;
+        }
+
+        .info1 {
+            font-family: Minecraft Ten;
+            margin-left: 100px;
+            border-radius: 15px;
+            background-color: #0e0d0ea4;
+            /* background-color: #1e0030; */
+            border: 2px solid #4b4b4b17; 
+            margin: 0px auto;
+            box-sizing: border-box;
+            padding: 15px;
+            max-width: 97%;
+            width: auto;
+            box-shadow: 0px 18px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .version {
+            line-height: 10px;
+            font-size: 2px;
+            text-align: left;
+            margin-bottom: px;
+            padding: 15px 10px;
+            border-left: 5px solid #131313; 
+        }
+
+        
+        
+        
+        
+
+        .btn-bt { 
+            background-color: #7906bb63;
+            font-size: 19px;
+            align-items: center;
+            text-align: center;
+            padding: 0.1rem 0.5rem;
+            border-radius: 6px;
+            color: #a200ff;
+        }
+
+        /* .version > p {
+             margin: auto; 
+        } */
+
+        .h-inf {
+            font-size: 19px;
+            font-weight: bold;
+            color: #dbdbdb;
+            padding-bottom: 2px;
+        }
+
+        .funtion-inf {
+            font-size: 18px;
+            margin-top: -12px;
+            font-family: Minecraft Ten;
+            line-height: .9;
+            color: #535353;
+        }
+
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* ซ่อนส่วนที่เกินออกมานอกหน้าจอ */
+            z-index: -2; /* วิดีโออยู่ด้านหลังเนื้อหา */
+}
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover; /* ทำให้วิดีโอเต็มจอโดยไม่เสียอัตราส่วน */
+
+}
+
+.blur-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #0000009d, transparent);
+    background-color: #111111;
+    
+    /* backdrop-filter: blur(200px); */ /* ฟิลเตอร์เบลอ */
+    z-index: -1; /* เลเยอร์เบลออยู่ด้านหน้าวิดีโอ */
+}
+
+        .radios input:checked {
+            border-color: var(--p);
+        }
+        .radios input {
+            display: none;
+        }
+
+        .radios label:hover, .radios input:checked + label {
+        background-color: #070707;
+        border-color: var(--p);
+        color: #fff;
+        }
+
+        .radios label {
+        color: #ffffffd0;
+        margin: 0 auto;
+        max-width: 390px;
+        font-weight: lighter;
+        font-family: iconic;
+        display: block;
+        font-size: 1.3em;
+        padding: 4px;
+        background-color: #23222263 ;
+        border: 1px solid #292929;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.5s ease;
+        }
+
+        .pad {
+            padding-bottom: 21px;
+        }
+
+        @media (max-width: 600px) {
+        .version {
+            font-size: 2px;
+        }
+        .radios label {
+        font-size: 1em;
+        }
+        .vv {
+            margin-top: 120px;
+            /* border-bottom: 1px solid #66089c; */
+            padding: 13px 0;
+        }
+
+        h1 {
+            font-size: 3.3rem;
+            font-family: Minecraft Ten;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        .version > h2 { 
+            font-weight: bold;
+            font-size: 27px;
+        }
+
+        .btn-bt { 
+            font-size: 18px;
+        }
+
+        
+
+        .h-inf {
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .funtion-inf {
+            font-size: 15px;
+        }
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #100418;
+                color: #fefcff;
+            }
+        }
+
+        
+    </style>
+
+    <script type="module" src="https://unpkg.com/esp-web-tools@10.1.0/dist/web/install-button.js?module"></script>
+</head>
+
+<body>
+    <div class="content">
+
+        <div class="video-background">
+            <video id="bg-vdo" autoplay loop playsinline muted >
+                <source src="res/vd3.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="blur-layer"></div>
+                
+
+        <h1  class="head1">ZipherHertz Installer 
+            
+        </h1>
+        <!-- <img src="res/ico-red-tran1.png" width="auto" height="50"> -->
+        <div class="pad"></div>
+
+        <p class="option">VERSION</p>
+        <div class="pad"></div>
+        <ul class="radios">
+            <li>
+                <input type="radio" id="last" name="type" value="zhlast" />
+                <label for="last">Hertz Update (Lasted) </label>
+
+                <input type="radio" id="v3" name="type" value="zh1"  />
+                <label for="v3">Hertz V1</label>
+                
+                
+                
+            </li>
+        </ul>
+        <p class="button-row">
+            <esp-web-install-button class="invisible" install-supported="" manifest="load\manifest_zhlast.json"></esp-web-install-button>
+        </p>
+        
+        
+        
+        <h2 class="vv">Detail</h2>
+        <div class="info1">
+
+            
+
+            <div class="version">
+                <h2> Hertz Lasted <span class="btn-bt">0.04</span></h2>
+                
+                <p class="h-inf"> Function  </p>
+                <p class="funtion-inf">
+                Jamming: Has 4 Mode press-boot (BLUETOOTH, BLE, WIFI, RC) <br> Blink: LED Blink Time = Mode (PINOUT 2) <br> PowerSave mode:  Hold Boot button (3 SEC) </p>
+            </div>
+            
+            <div class="version">
+                
+                <h2> Hertz V1 <span class="btn-bt">0.01</span></h2>
+                <p class="h-inf"> Function </p>
+                <p class="funtion-inf">Jamming: Has 4 Mode press-boot (BLUETOOTH, BLE, WIFI, RC) <br> Blink: LED Blink Time = Mode (PINOUT 2) <br> PowerSave
+                mode: Hold Boot button (3 SEC) </p>
+                </div>
+            
+
+        </div>
+
+        <button class="mus-btn" id="playButton">Music</button>
+
+
+        <div class="pad"></div>
+        <div class="footer">
+             Discord <a href="https://discord.gg/x9HGCbFEeq">Zipher-Community</a>
+            &mdash;
+             <a href="https://www.facebook.com/profile.php?id=61563542035269">Zipher Cyprex</a> 
+        </div>
+
+        <script>
+            document.querySelectorAll('input[name="type"]').forEach(radio =>
+                radio.addEventListener("change", () => {
+                    const button = document.querySelector('esp-web-install-button');
+                    button.manifest = `load/manifest_${radio.value}.json`;
+                    button.classList.remove('invisible');
+                })
+            );
+
+
+
+            document.getElementById('playButton').addEventListener('click', function () {
+                    const video = document.getElementById('bg-vdo');
+                    video.play();
+                    video.muted = false; // เปิดเสียง
+                    this.style.display = 'none'; // ซ่อนปุ่ม
+                });
+
+            const video = document.getElementById('bg-vdo');
+                let isReversing = false;
+
+                function reverseVideo() {
+                    if (!isReversing) {
+                        isReversing = true;
+                        const reverseFrame = () => {
+                            if (video.currentTime > 0) {
+                                video.currentTime -= 0.1; // ลดทีละ 0.1 วินาที
+                                requestAnimationFrame(reverseFrame);
+                            } else {
+                                isReversing = false;
+                                video.play(); // เล่นวิดีโอใหม่หลังจากย้อนถึงจุดเริ่มต้น
+                            }
+                        };
+                        reverseFrame();
+                    }
+                }
+
+                // เมื่อวิดีโอเล่นถึงจุดสิ้นสุด ให้ย้อนกลับ
+                video.addEventListener('ended', function () {
+                    video.pause();
+                    reverseVideo();
+                });
+
+                // เริ่มเล่นวิดีโอ
+                video.play();
+
+
+        </script>
+    </div>
+</body>
+
+</html>
