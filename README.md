@@ -1,13 +1,14 @@
 # ZHertz-Jammer
 Zipher Hertz For Jamming 2.4ghz And -
----
-Install Hertz : https://ziphercyprex.github.io/ZHertz-Jammer/
+
+- Install Hertz : https://ziphercyprex.github.io/ZHertz-Jammer/
 ---
 ### **ESP32 + NRF24 Jammer: Guidelines & Warnings**
 
 #### **⚠️ Legal Disclaimer**
 
-Using an **ESP32 + NRF24 jammer** to interfere with wireless communications may be **illegal** in many countries. Unauthorized jamming can violate radio regulations, disrupt essential services, and result in severe penalties. Ensure you have proper authorization before conducting any tests.
+#### Using an **ESP32 + NRF24 jammer** to interfere with wireless communications may be **illegal** in many countries. Unauthorized jamming can violate radio regulations, disrupt essential services, and result in severe penalties. Ensure you have proper authorization before conducting any tests.
+
 ---
 
 ### **✅ Guidelines**
@@ -21,8 +22,11 @@ Using an **ESP32 + NRF24 jammer** to interfere with wireless communications may 
 
 - Use the web flasher at **[ZHertz Jammer](https://ziphercyprex.github.io/ZHertz-Jammer/)** for quick and easy flashing.
 - Ensure proper driver installation before flashing.
-![image](https://github.com/user-attachments/assets/417f097b-8f2f-499b-bb65-c346a6968834)
-<img src="https://github.com/user-attachments/assets/417f097b-8f2f-499b-bb65-c346a6968834" width="650" height="auto">
+
+<img src="https://github.com/user-attachments/assets/0f9eea2f-e1a7-4700-9690-9507fa357013" width="650" height="auto">
+
+---
+
 #### **3. Power & Connections**
 
 - Use a **stable power source** to prevent instability.
@@ -31,6 +35,7 @@ Using an **ESP32 + NRF24 jammer** to interfere with wireless communications may 
 ### ESP32-nRF24L01+ pinout + battery mod
 Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.                
 [nRF24L01+ pinout](https://howtomechatronics.com/wp-content/uploads/2017/02/NRF24L01-Pinout-NRF24L01-PA-LNA--768x512.png?ezimgfmt=ng:webp/ngcb2)
+- Only ESP32s Led Stetus will work.
 [ESP32s pinout](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png)
 
 ### HSPI
@@ -65,6 +70,8 @@ Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.
 |                     |                      | OUT +                  | Switch +         |       |
 |                     |                      | OUT -                  |                   |  GND  |
 |                     |                      |                        | Switch -        |  3V3  |
+
+===
 
 #### **4. Testing & Debugging**
 
