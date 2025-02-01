@@ -22,7 +22,7 @@ Using an **ESP32 + NRF24 jammer** to interfere with wireless communications may 
 - Use the web flasher at **[ZHertz Jammer](https://ziphercyprex.github.io/ZHertz-Jammer/)** for quick and easy flashing.
 - Ensure proper driver installation before flashing.
 ![image](https://github.com/user-attachments/assets/417f097b-8f2f-499b-bb65-c346a6968834)
-
+<img src="https://github.com/user-attachments/assets/417f097b-8f2f-499b-bb65-c346a6968834" width="650" height="auto">
 #### **3. Power & Connections**
 
 - Use a **stable power source** to prevent instability.
@@ -66,13 +66,14 @@ Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.
 |                     |                      | OUT -                  |                   |  GND  |
 |                     |                      |                        | Switch -        |  3V3  |
 
-![image](https://github.com/user-attachments/assets/3a1c8fc2-ab7a-4554-8887-1f77052d8791)
-
-
 #### **4. Testing & Debugging**
 
 - Perform tests in **controlled environments** (e.g., a Faraday cage).
 - Monitor signal interference using a **spectrum analyzer**.
+
+
+<img src="https://github.com/user-attachments/assets/3a1c8fc2-ab7a-4554-8887-1f77052d8791" width="650" height="auto">
+
 
 ---
 
