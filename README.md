@@ -7,7 +7,8 @@ Zipher Hertz For Jamming 2.4ghz And -
 
 #### **⚠️ Legal Disclaimer**
 
-Using an **ESP32 + NRF24 jammer** to interfere with wireless communications may be **illegal** in many countries. Unauthorized jamming can violate radio regulations, disrupt essential services, and result in severe penalties. Ensure you have proper authorization before conducting any tests.
+#### Using an **ESP32 + NRF24 jammer** to interfere with wireless communications may be **illegal** in many countries. Unauthorized jamming can violate radio regulations, disrupt essential services, and result in severe penalties. Ensure you have proper authorization before conducting any tests.
+
 ---
 
 ### **✅ Guidelines**
