@@ -67,7 +67,7 @@
 
         body {
             /* cursor: url('res/cursor40pxV.png'), auto; */
-            font-family: Minecraft Ten;
+            font-family: iconic;
             padding: 0;
             margin: 0;
             line-height: 1.6;
@@ -78,7 +78,7 @@
         .content {
             /* cursor: url('res/cursor40pxV.png'), auto; */
             z-index: 1;
-            font-family: Minecraft Ten;
+            font-family: iconic;
             max-width: 870px;
             margin: 0 auto;
             padding: 20px;
@@ -88,14 +88,14 @@
         h1,
         h2,
         h3 {
-            font-family: Minecraft Ten;
+            font-family: iconic;
             font-weight: 600;
             margin: 0 0 20px;
         }
 
         h1 {
             font-size: 4.6rem;
-            font-family: Minecraft Ten;
+            font-family: iconic;
             line-height: 1;
             
         }
@@ -116,7 +116,7 @@
         
 
         a {
-            font-family: Minecraft Ten;
+            font-family: iconic;
             color: #fcfcfc;
             text-decoration: none;
             font-weight: 500;
@@ -131,7 +131,7 @@
         }
 
         .button-row {
-            font-family: Minecraft Ten;
+            font-family: iconic;
             margin: 40px 0;
         }
 
@@ -169,7 +169,7 @@
 
         .option {
             
-            font-family: Minecraft Ten;
+            font-family: iconic;
             justify-content: center;
             margin: 0 auto;
             margin-top: 2em;
@@ -191,7 +191,7 @@
             
             width: auto;
             font-weight: bold;
-            font-family: Minecraft Ten;
+            font-family: iconic;
             justify-content: center;
             margin: 0 auto;
             margin-top: 20px;
@@ -231,7 +231,7 @@
         }
 
         .info1 {
-            font-family: Minecraft Ten;
+            font-family: iconic;
             margin-left: 100px;
             border-radius: 15px;
             background-color: #0e0d0ea4;
@@ -248,7 +248,7 @@
 
         .version {
             line-height: 10px;
-            font-size: 2px;
+            
             text-align: left;
             margin-bottom: px;
             padding: 15px 10px;
@@ -283,12 +283,15 @@
 
         .funtion-inf {
             font-size: 18px;
+            font-weight: lighter;
             margin-top: -12px;
-            font-family: Minecraft Ten;
+            font-family: iconic;
             line-height: .9;
+            color: #3f3f3f;
+        }
+        .funtion-inf > strong {
             color: #535353;
         }
-
 
         .video-background {
             position: fixed;
@@ -374,7 +377,7 @@
 
         h1 {
             font-size: 3.3rem;
-            font-family: Minecraft Ten;
+            font-family: iconic;
             line-height: 1;
         }
 
@@ -472,7 +475,12 @@
                 
                 <p class="h-inf"> Function  </p>
                 <p class="funtion-inf">
-                Jamming: 4 Mode press-boot For Switch Mode (BLUETOOTH, BLE, WIFI, RC) <br> Blink: LED Blink 4 Time = RC DRONS (PINOUT 2) <br> PowerSave mode:  Hold Boot button (3 SEC) <br>Check Heap memory (kilobyte) </p>
+                <strong>Jamming</strong>: 4 Mode press-boot For Switch Mode (BLUETOOTH, BLE, WIFI, RC) 
+                <br> <strong>Support</strong>: ESP32s (LED), ESP32-D-U,
+                <br> <strong>Blink</strong>: LED Blink (PINOUT-2)
+                <br> <strong>PowerSave mode</strong>:  Hold Boot button (3 SEC) 
+                <br> <strong>Use Low Memory And Cpu</strong>: Heap Free: 244.78 KB (84.15%) | CPU Free: 306.90 KB (88.10%)
+                <br>Check free memory-CPU in serial mon  </p>
             </div>
             
             <div class="version">
@@ -495,7 +503,7 @@
                 <p class="funtion-inf">
                     [+] Bug Fix Change mode
                     <br> [x] Add oftimize (Setmode)
-                    <br>[+] Check Heap memory (kilobyte)
+                    <br> [+] Check free memory-CPU in serial mon
                 
                 </p>
 
