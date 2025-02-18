@@ -101,15 +101,15 @@ Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.
 
 ### VSPI 
 | E01-2G4M27D | VSPI Pin (ESP8266) | VSPI Pin (ESP32S2) | 10uf capacitor |
-|---------------|------------------|--------------------|
-| VCC           | 5V               | 5V                 | (+) Capacitor |
-| GND           | GND              |                    | (-) Capacitor |
-| CE            | GPIO 22          |                    |
-| CSN           | GPIO 21          |                    |
-| SCK           | GPIO 18          |                    |
-| MOSI          | GPIO 23          |                    |
-| MISO          | GPIO 19          |                    |
-| IRQ           |                  |                    |
+|---------------|------------------|--------------------|----------------|
+| VCC           | 5V               | 5V                 | (+) Capacitor  |
+| GND           | GND              |                    | (-) Capacitor  |
+| CE            | GPIO 22          |                    |                |
+| CSN           | GPIO 21          |                    |                |
+| SCK           | GPIO 18          |                    |                |
+| MOSI          | GPIO 23          |                    |                | 
+| MISO          | GPIO 19          |                    |                |
+| IRQ           |                  |                    |                |
 
 ---
 
