@@ -1,9 +1,8 @@
-# ZHertz-Jammer
-Zipher Hertz For Jamming 2.4ghz And -
+# Zipher Hertz System for 2.4GHz Testing and Jamming
+The Zipher Hertz system, using an ESP32 and RF24 module, is designed for 2.4GHz signal testing, debugging, and controlled jamming. It can disrupt wireless communication for testing or close unwanted connections—ideal for those annoyed by noisy Bluetooth speakers. Intended for experimental and educational use only.
 
-- Install Hertz : https://ziphercyprex.github.io/ZHertz-Jammer/
+- Install Hertz : https://ziphercyprex.github.io/ZipherHertz-Jammer/
 ---
-### **ESP32 + NRF24 Jammer: Guidelines & Warnings**
 
 #### **⚠️ Legal Disclaimer**
 
@@ -18,9 +17,13 @@ Zipher Hertz For Jamming 2.4ghz And -
 - **ESP32** as the main controller.
 - **NRF24L01 (3.7V)** or **E01-2G4M27D (5V)** for stronger interference.
 
+#### Support Module
+- ESP32 (ESP32S ESP32D ESP32U) 30pin 38pin
+- ESP8266 (D1-Mini-Pro and All-8266 )
+
 #### **2. Flashing the Firmware**
 
-- Use the web flasher at **[ZHertz Jammer](https://ziphercyprex.github.io/ZHertz-Jammer/)** for quick and easy flashing.
+- Use the web flasher at **[Hertz Jammer](https://ziphercyprex.github.io/ZipherHertz-Jammer/)** for quick and easy flashing.
 - Ensure proper driver installation before flashing.
 
 <img src="https://github.com/user-attachments/assets/0f9eea2f-e1a7-4700-9690-9507fa357013" width="650" height="auto">
@@ -30,7 +33,7 @@ Zipher Hertz For Jamming 2.4ghz And -
 #### **3. Power & Connections**
 
 - Use a **stable power source** to prevent instability.
-- If using **E01-2G4M27D (5V)**, ensure the ESP32 can handle the voltage difference.
+- If using **E01-2G4M27D (5V)**, ensure the ESP32 can handle the voltage 5v.
 
 ### ESP32-nRF24L01+ pinout + battery mod
 Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.                
@@ -39,9 +42,9 @@ Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.
 [ESP32s pinout](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png)
 
 ### HSPI
-| nRF24L01 | HSPI Pin (ESP32) | 10uf capacitor |
+| E01-2G4M27D | HSPI Pin (ESP32) | 10uf capacitor |
 |---------------|------------------|--------------------|
-| VCC           | 3.3V             | (+) Capacitor |
+| VCC           | 5V               | (+) Capacitor |
 | GND           | GND              | (-) Capacitor |
 | CE            | GPIO 16          |
 | CSN           | GPIO 15          |
@@ -51,9 +54,9 @@ Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.
 | IRQ           |                  |
 
 ### VSPI 
-| nRF24L01 | VSPI Pin (ESP32) | 10uf capacitor |
+| E01-2G4M27D | VSPI Pin (ESP32) | 10uf capacitor |
 |---------------|------------------|--------------------|
-| VCC           | 3.3V             | (+) Capacitor |
+| VCC           | 5V               | (+) Capacitor |
 | GND           | GND              | (-) Capacitor |
 | CE            | GPIO 22          |
 | CSN           | GPIO 21          |
@@ -63,15 +66,15 @@ Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.
 | IRQ           |                  |
 
 ### Battery modification (additional)
-| 3.7V Li-Ion battery | JST-PH2 connector    | TP4056 Charging Module | Slide Switch | ESP32 |
-|---------------------|----------------------|------------------------|-------------------|-------|
-| (+) Battery         | (+) JST-PH2          | Batt +                  |                   |       |
-| (-) Battery         | (-) JST-PH2          | Batt -                  |                   |       |
-|                     |                      | OUT +                  | Switch +         |       |
-|                     |                      | OUT -                  |                   |  GND  |
-|                     |                      |                        | Switch -        |  3V3  |
+| 3.7V Li-Ion battery | JST-PH2 connector    | TP4056 Charging Module | Slide Switch | StepUp 3.7v to 5v | ESP32 |
+|---------------------|----------------------|------------------------|--------------|-------------------|-------|
+| (+) Battery         | (+) JST-PH2          | Batt +                 |              |                   |       |
+| (-) Battery         | (-) JST-PH2          | Batt -                 |              |                   |       |
+|                     |                      | OUT +                  | Switch +     | VCC IN            |       |
+|                     |                      | OUT -                  |              | GND               |  GND  |
+|                     |                      |                        | Switch -     | VCC OUT           |  5V   |
 
-===
+---
 
 #### **4. Testing & Debugging**
 
@@ -83,25 +86,36 @@ Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.
 
 
 ---
+### Other Board Connection (Writing . .)
+### HSPI
+| E01-2G4M27D | HSPI Pin (ESP8266) | 10uf capacitor |
+|---------------|------------------|--------------------|
+| VCC           | 5V               | (+) Capacitor |
+| GND           | GND              | (-) Capacitor |
+| CE            | GPIO 16          |
+| CSN           | GPIO 15          |
+| SCK           | GPIO 14          |
+| MOSI          | GPIO 13          |
+| MISO          | GPIO 12          |
+| IRQ           |                  |
+
+### VSPI 
+| E01-2G4M27D | VSPI Pin (ESP8266) | VSPI Pin (ESP32S2) | 10uf capacitor |
+|---------------|------------------|--------------------|
+| VCC           | 5V               | 5V                 | (+) Capacitor |
+| GND           | GND              |                    | (-) Capacitor |
+| CE            | GPIO 22          |                    |
+| CSN           | GPIO 21          |                    |
+| SCK           | GPIO 18          |                    |
+| MOSI          | GPIO 23          |                    |
+| MISO          | GPIO 19          |                    |
+| IRQ           |                  |                    |
+
+---
 
 ### **⚠️ Warnings**
 
-1. **Illegal Use Risks**
-    
-    - Unauthorized jamming of public or private networks is **a criminal offense**.
-    - May disrupt **Wi-Fi, IoT devices, drones, or industrial systems**.
-2. **Detection & Tracking**
-    
-    - Authorities can **trace** jamming signals back to your location.
-    - Many regions have **radio monitoring** systems to detect interference.
-3. **Hardware Considerations**
-    
-    - NRF24L01 has **limited range**, while **E01-2G4M27D (5V)** provides stronger interference.
-    - High-power modules generate more heat—use **cooling solutions if needed**.
-4. **Ethical Responsibility**
-    
-    - Use for **educational & research** purposes only.
-    - Avoid using jammers in **public areas** or against unauthorized targets.
+1. This software is intended for educational and research purposes only. The author bears no responsibility for any misuse of this software. Use it responsibly and in compliance with all applicable laws and regulations.
 
 ---
 
