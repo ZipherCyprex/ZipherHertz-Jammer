@@ -13,6 +13,15 @@
             ]
         },
         {
+            "chipFamily": "ESP8266",
+            "parts": [
+                {
+                    "path": "hz-8266.ino.bin",
+                    "offset": 0
+                }
+            ]
+        },
+        {
             "chipFamily": "ESP32-S2",
             "parts": [
                 {
