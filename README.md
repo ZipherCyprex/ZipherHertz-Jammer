@@ -82,6 +82,7 @@ Here are pinouts for HSPI and VSPI. You need nRF24L01 modules connected.
 - Monitor signal interference using a **spectrum analyzer**.
 
 
+<img src="https://github.com/user-attachments/assets/6ab75624-edd1-4243-b43a-055fdc8cce86" width="650" height="auto">
 <img src="https://github.com/user-attachments/assets/3a1c8fc2-ab7a-4554-8887-1f77052d8791" width="650" height="auto">
 
 
